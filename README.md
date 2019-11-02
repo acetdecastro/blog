@@ -1,7 +1,5 @@
 # blog
 
-> My mind-blowing Nuxt.js project
-
 ## Build Setup
 
 ``` bash
