@@ -10,7 +10,12 @@
       <div class="mb-4">
         <label class="text-gray-700">Description </label>
 
-        <textarea class="pt-4 pb-1 w-full text-gray-900 font-semibold bg-gray-200 focus:outline-none text-sm sm:text-xl break-words" v-text="article.description" readonly></textarea>
+        <textarea 
+          class="pt-4 pb-1 w-full text-gray-900 font-semibold bg-gray-200 focus:outline-none text-sm sm:text-xl break-words"
+          v-text="article.description"
+          readonly
+        >
+        </textarea>
       </div>
 
       <div class="mb-4">

@@ -22,7 +22,12 @@
 
 <script>
 export default {
-  props: ["fieldName", "label", "errors", "articleData"],
+  props: [
+    "fieldName", 
+    "label", 
+    "errors", 
+    "articleData"
+  ],
 
   data: function() {
     return {

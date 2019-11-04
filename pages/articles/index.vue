@@ -8,24 +8,24 @@
           v-for="article in articles"
           :key="article.data.id"
           :to="article.links.self"
-          class="mx-auto my-4 w-68 md:w-144 flex flex-col justify-center"
+          class="mx-auto my-4 w-68 sm:w-144 flex flex-col justify-center"
         >
           <article>
-            <div class="p-6 h-32 w-auto bg-white rounded-lg shadow-lg hover:bg-teal-100">
+            <div class="p-4 h-32 w-auto bg-white rounded-lg shadow-lg hover:bg-teal-100">
               <h2 
                 v-text="article.data.title"
-                class="mb-2 text-xl font-semibold tracking-wider truncate"
+                class="mb-2 text-base sm:text-xl font-semibold tracking-wider truncate"
               >
               </h2>
 
               <p
                 v-text="article.data.description"
-                class="mb-2 font-semibold text-gray-700 tracking-wide leading-relaxed break-normal truncate"
+                class="mb-2 text-sm sm:text-base font-semibold text-gray-700 tracking-wide leading-relaxed break-normal truncate"
               >
               </p>
 
               <span
-                class="text-sm font-semibold text-gray-600 tracking-wide leading-relaxed break-normal"
+                class="text-xs sm:text-sm font-semibold text-gray-600 tracking-wide leading-relaxed break-normal"
               >
                 {{ article.data.created_at }}
               </span>
