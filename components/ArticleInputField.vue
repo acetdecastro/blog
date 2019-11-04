@@ -1,44 +1,35 @@
 <template>
-  <div class="relative mb-3">
-    <label 
+  <div class="mb-6">
+    <label
       :for="fieldName"
-      class="auth-label"
-    >
-      {{ label }}
-    </label>
+      class="pt-2 uppercase text-sm font-bold text-gray-600 tracking-wider"
+    >{{ label }}</label>
 
     <input
-      v-model="value"
-      @input="updateField"
+      type="text"
+      class="pt-4 pb-1 w-full border-b-2 border-gray-500 bg-gray-200 focus:outline-none focus:border-blue-400 text-gray-800 text-sm sm:text-xl"
+      :class="errorClassObject()"
       :id="fieldName"
-      :name="fieldName"
-      :type="type"
-      :class="[ inputClassObject ]"
-      :placeholder="placeholder"
+      v-model="value"
+      autocomplete="off"
       autofocus
+      @input="updateField"
     />
 
-    <p 
-      class="form-field-text-validation-error"
-      v-text="showErrorMsg()"
-    >
-    </p>
+    <p class="form-field-text-validation-error" v-text="showErrorMsg()"></p>
   </div>
 </template>
 
 <script>
 export default {
-  name: "AuthInputField",
-
   props: [
-    "fieldName",
+    "fieldName", 
     "label", 
-    "placeholder", 
-    "type",
-    "errors",
+    "errors", 
+    "articleData"
   ],
 
-  data () {
+  data: function() {
     return {
       value: ""
     };
@@ -51,13 +42,6 @@ export default {
         this.errors[this.fieldName] &&
         this.errors[this.fieldName].length
       )
-    },
-
-    inputClassObject () {
-      return {
-        "auth-input": ! this.hasError,
-        "auth-input-is-invalid": this.hasError
-      }
     }
   },
 
@@ -79,6 +63,18 @@ export default {
         this.errors[this.fieldName] = null;
       }
     },
+
+    errorClassObject () {
+      return {
+        "form-field-line-error": this.hasError
+      }
+    }
   },
+
+  watch: {
+    articleData: function(val) {
+      this.value = val;
+    }
+  }
 };
 </script>

@@ -48,8 +48,8 @@ export default {
       }
     },
     redirect: {
-      login: 'auth/login',
-      home: '/'
+      login: '/login',
+      logout: '/',
     }
   },
 

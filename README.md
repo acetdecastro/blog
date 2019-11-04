@@ -1,20 +1,13 @@
-# blog
+# Blog
 
-## Build Setup
+> Basic CRUD for article (id, title, description)
+> Requests via API built from Laravel with JWT
+
+## Build Setup for local development
+> Serve Laravel blog-api on port 8000
+> If you prefer a different port, make sure to change the value of baseURL in nuxt.config.js file
+> After serving:
 
 ``` bash
-# install dependencies
-$ npm run install
-
 # serve with hot reload at localhost:3000
 $ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
