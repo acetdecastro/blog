@@ -1,3 +1,124 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.auth-label {
+  @apply text-gray-600 text-sm tracking-wide font-bold pl-3 pt-2 absolute uppercase
+}
+
+.auth-input {
+  @apply w-full p-3 pt-8 rounded bg-gray-100 text-gray-900
+}
+
+.auth-input:hover {
+  @apply bg-gray-200
+}
+
+.auth-input:focus {
+  @apply outline-none bg-gray-300 shadow-lg
+}
+
+.auth-input-is-invalid {
+  @apply w-full p-3 pt-8 rounded bg-red-100 text-gray-900
+}
+
+.auth-input-is-invalid:hover {
+  @apply bg-gray-200
+}
+
+.auth-input-is-invalid:focus {
+  @apply outline-none bg-gray-300 shadow-lg
+}
+
+.form-field-text-validation-error {
+  @apply mt-1 pl-2 text-sm text-red-600 font-bold tracking-wide
+}
+
+.form-field-line-error {
+  @apply border-red-600
+}
+
+.btn {
+  @apply text-base tracking-wide rounded-lg font-bold
+}
+
+.btn:focus {
+  @apply outline-none shadow-outline
+}
+
+.btn-primary {
+  @apply bg-green-300 shadow border-blue-600 py-2 px-4
+}
+
+.btn-primary:hover {
+  @apply bg-green-200
+}
+
+/* Animations */
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .25s
+}
+
+.page-enter, .page-leave-active {
+  opacity: 0
+}
+
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-fastest {
+  transition-duration: 75ms;
+}
+.transition-faster {
+  transition-duration: 100ms;
+}
+.transition-fast {
+  transition-duration: 150ms;
+}
+.transition-medium {
+  transition-duration: 200ms;
+}
+.transition-slow {
+  transition-duration: 300ms;
+}
+
+.transition-slower {
+  transition-duration: 500ms;
+}
+
+.transition-slowest {
+  transition-duration: 700ms;
+}
+
+.transition-all {
+  transition-property: all;
+}
+
+.transition-opacity {
+  transition-property: opacity;
+}
+
+.transition-transform {
+  transition-property: transform;
+}
+
+.focus-visible.focus-visible\:underline {
+  text-decoration: underline;
+}
+
+@keyframes scale-90 {
+  0% {
+    transform: scale(1.0);
+  }
+  100% {
+    transform: scale(2.0);
+  }
+}
