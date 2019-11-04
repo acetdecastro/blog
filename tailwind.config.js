@@ -5,7 +5,17 @@
 ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 */
 module.exports = {
-  theme: {},
+  theme: {
+    extend: {
+      width: {
+        '96': '24rem',
+      },
+
+      container: {
+        center: true,
+      },
+    }
+  },
   variants: {},
   plugins: []
 }

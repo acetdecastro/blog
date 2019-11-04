@@ -1,3 +1,45 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.auth-label {
+  @apply text-gray-600 text-sm tracking-wide font-bold pl-3 pt-2 absolute uppercase
+}
+
+.auth-input {
+  @apply w-full p-3 pt-8 rounded bg-gray-100 text-gray-900
+}
+
+.auth-input:hover {
+  @apply bg-gray-200
+}
+
+.auth-input:focus {
+  @apply outline-none bg-gray-300 shadow-lg
+}
+
+.auth-input-is-invalid {
+  @apply w-full p-3 pt-8 rounded bg-red-100 text-gray-900
+}
+
+.auth-input-is-invalid:hover {
+  @apply bg-gray-200
+}
+
+.auth-input-is-invalid:focus {
+  @apply outline-none bg-gray-300 shadow-lg
+}
+
+.form-field-text-validation-error {
+  @apply mt-1 text-center text-sm text-red-600 font-bold tracking-wide
+}
+
+/* Animations */
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .25s
+}
+
+.page-enter, .page-leave-active {
+  opacity: 0
+}
