@@ -1,16 +1,11 @@
 <template>
   <div>
-    <login />
   </div>
 </template>
 
 <script>
-import login from "./login";
-
 export default {
-  components : {
-    login
-  },
+  middleware : 'auth'
 
   // data () {
   //   return {

@@ -111,19 +111,16 @@ export default {
       });
     },
 
-    submitForm() {
-      this.$axios
-        .post("/auth/register", this.form)
-        .then(response => {
-          this.$auth.login({
-            data: this.form
-          });
+   async submitForm() {
+     try {
+       await this.$axios.post("/auth/register", this.form)
 
-          this.$router.push({name: "index"});
-        })
-        .catch(errors => {
-          this.errors = errors.response.data.errors;
-        });
+       await this.$auth.loginWith('local', {data: this.form});
+
+       this.$router.push("articles");
+     } catch (errors) {
+       this.errors = errors.response.data.errors;
+     }
     }
   }
 };
