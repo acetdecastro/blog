@@ -8,7 +8,7 @@
 2. If you prefer a different port, make sure to change the value of baseURL in nuxt.config.js file
 3. Run the commands below consecutively
 ``` bash
-# serves with hot reload at localhost:3000
+# install dependencies
 $ npm install
 
 # serves with hot reload at localhost:3000
