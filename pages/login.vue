@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto py-32 flex justify-center items-center">
+  <div class="mx-auto py-16 flex justify-center items-center">
     <div class="w-96 p-6 bg-white h-auto shadow-xl rounded">
       <div class="text-center mb-6">
         <h1 class="text-4xl font-bold">Log In</h1>
@@ -8,8 +8,8 @@
 
       <form @submit.prevent="submitForm">
         <AuthInputField
-          v-for="(inputField, index) in inputFields"
-          :key="index"
+          v-for="inputField in inputFields"
+          :key="inputField.name"
           :fieldName="inputField.name"
           :label="inputField.label"
           :placeholder="inputField.placeholder"
@@ -99,14 +99,14 @@ export default {
 
     async submitForm() {
       try {
-       await this.$axios.post("/auth/login", this.form)
+        await this.$axios.post("/auth/login", this.form)
 
-       await this.$auth.loginWith('local', {data: this.form});
+        await this.$auth.loginWith('local', {data: this.form});
 
-       this.$router.push("articles");
-     } catch (errors) {
-       this.errors = errors.response.data.errors;
-     }
+        this.$router.push("articles");
+      } catch (errors) {
+        this.errors = errors.response.data.errors;
+      }
     }
   }
 };

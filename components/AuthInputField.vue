@@ -15,6 +15,7 @@
       :type="type"
       :class="[ inputClassObject ]"
       :placeholder="placeholder"
+      autofocus
     />
 
     <p 
