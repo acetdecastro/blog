@@ -8,13 +8,29 @@
 export default {
   name: "UserCircle",
 
-  computed: {
-      userCircleName: function() {
-        return this.user.name
-          .match(/[A-Z]/g)
-          .slice(0, 2)
-          .join("")
-      },
+  data () {
+    return {
+      name: ''
     }
+  },
+
+  created () {
+    this.capitalizeFirstCharOfUserName()
+  },
+
+  methods: {
+    capitalizeFirstCharOfUserName () {
+      this.name = this.user.name.charAt(0).toUpperCase() + this.user.name.slice(1)
+    }
+  },
+
+  computed: {
+    userCircleName: function() {
+      return this.name
+        .match(/[A-Z]/g)
+        .slice(0, 2)
+        .join("")
+    },
+  }
 }
 </script>

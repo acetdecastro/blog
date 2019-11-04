@@ -10,7 +10,7 @@
       <div class="mb-4">
         <label class="text-gray-700">Description </label>
 
-        <p class="text-gray-900 font-semibold tracking-wide sm:text-xl">{{ article.description }}</p>
+        <textarea class="pt-4 pb-1 w-full text-gray-900 font-semibold bg-gray-200 focus:outline-none text-sm sm:text-xl break-words" v-text="article.description" readonly></textarea>
       </div>
 
       <div class="mb-4">
